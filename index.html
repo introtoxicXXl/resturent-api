@@ -11,28 +11,21 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="container">
+  <!-- ---------------------------- search input ----------------------------- -->
   <section class="container my-3">
     <div>
       <div class="input-group mb-3 w-50 mx-auto">
         <input type="text" class="form-control" id="input-field" placeholder="search your meal"
           aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="search-btn">Button</button>
+        <button class="btn btn-outline-secondary" type="button" onclick="loadMeal()" id="search-btn">Search</button>
       </div>
     </div>
   </section>
+  <!-- ------------------------------ meal card ------------------------------ -->
   <section>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="meal-card">
+      
     </div>
   </section>
 
