@@ -1,3 +1,4 @@
+
 const loadMeal = () => {
   const searchFood = document.getElementById('input-field');
   const searchText = searchFood.value;
@@ -15,15 +16,15 @@ const loadMeal = () => {
 
 }
 
-const displayMeal = meals => {
-  // console.log(meals)
-  const mealCard = document.getElementById('meal-card');
-  mealCard.textContent = '';
-  meals.forEach(meal => {
-    console.log(meal)
-    const div = document.createElement('div');
-    div.className = 'col';
-    div.innerHTML = `
+  const displayMeal = meals => {
+    // console.log(meals)
+    const mealCard = document.getElementById('meal-card');
+    mealCard.textContent = '';
+    meals.forEach(meal => {
+      console.log(meal)
+      const div = document.createElement('div');
+      div.className = 'col';
+      div.innerHTML = `
         <div class="card h-100">
              <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
           <div class="card-body">
@@ -33,15 +34,15 @@ const displayMeal = meals => {
           </div>
         </div>
     `;
-    mealCard.appendChild(div);
-  })
-}
+      mealCard.appendChild(div);
+    })
+  }
 
-const loadDetail = details => {
-  // console.log(details)
-  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${details}`
-  // console.log(url)
-  fetch(url)
-  .then(res => res.json())
-  .then(data => console.log(data.meals[0]))
-}
+  const loadDetail = details => {
+    // console.log(details)
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${details}`
+    // console.log(url)
+    fetch(url)
+      .then(res => res.json())
+      .then(data => console.log(data.meals[0]))
+  }
