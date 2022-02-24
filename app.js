@@ -1,4 +1,7 @@
-
+const preload = document.getElementById('load');
+window.addEventListener('load',function(){
+preload.style.display = 'none';
+})
 const loadMeal = () => {
   const searchFood = document.getElementById('input-field');
   const searchText = searchFood.value;
